@@ -1,0 +1,27 @@
+{
+    "questions": [ {
+            "question": {
+                "type": "question",
+                "value": "What is the capital of France?",
+                "answers": ["Paris", "London", "Berlin", "Madrid"],
+                "correctID": 0
+            }
+        },
+        {
+            "question": {
+                "type": "question",
+                "value": "Which planet is known as the Red Planet?",
+                "answers": ["Earth", "Mars", "Jupiter", "Venus"],
+                "correctID": 1
+            }
+        },
+        {
+            "question": {
+                "type": "question",
+                "value": "What is 2 + 2?",
+                "answers": ["3", "4", "5", "6"],
+                "correctID": 1
+            }
+        }
+    ]
+}

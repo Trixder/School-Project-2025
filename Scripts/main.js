@@ -33,6 +33,8 @@ window.onload = function() {
         });
         index++;
     });
+
+    LoadData();
 };
 
 window.onresize = function() {
