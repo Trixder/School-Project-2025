@@ -34,3 +34,7 @@ body::-webkit-scrollbar {
     height: 100vh;
     flex-shrink: 0;
 }
+
+.ytp-chrome-top {
+    display: none;
+}

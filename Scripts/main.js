@@ -1,3 +1,6 @@
+// usefull links:
+// https://developers.google.com/youtube/player_parameters
+
 //modification
 let resultWait = 1.5; //in seconds
 
@@ -19,6 +22,7 @@ function enableScroll() {
 
     /* --- | Main | --- */
 window.onload = function() {
+    console.log("TESTING: press \"enter\" to skip question");
     //loads data and generates html
     LoadData();
 
