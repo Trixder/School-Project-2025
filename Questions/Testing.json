@@ -25,6 +25,16 @@
                 "questionID": 2,
                 "correctID": 1
             }
+        },
+        {
+            "question": {
+                "type": "video",
+                "url": "https://www.youtube.com/embed/jyWCkBB6FMs",
+                "value": "What is 2 + 2?",
+                "answers": ["3", "4", "5", "6"],
+                "questionID": 3,
+                "correctID": 1
+            }
         }
     ]
 }

@@ -27,13 +27,13 @@ function CheckAnswer() {
     checked = null;
 
     //moves the slide
-    UpdateSlider();
     index++;
+    UpdateSlider();
 
     //waits on the result for a sec
     setTimeout(() => {
-        UpdateSlider();
         index++;
+        UpdateSlider();
     }, resultWait * 1000);
 }
 

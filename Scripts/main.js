@@ -3,7 +3,7 @@ let resultWait = 1.5; //in seconds
 
 //variables for scrolling
 let width = 0;
-let index = 1;
+let index = 0;
 
 //required for parsing text to html
 const parser = new DOMParser();
@@ -22,6 +22,9 @@ window.onload = function() {
     //loads data and generates html
     LoadData();
 
+    //sets scroll length
+    if (width == null) width = screen.width;
+
     //Resets position after refresh
     history.scrollRestoration = "manual";
     window.scrollTo({
@@ -33,14 +36,11 @@ window.onload = function() {
     //disables scrolling
     disableScroll();
 
-    //sets scroll length
-    if (width == null) width = screen.width;
-
-    //TODO 1: Remove (testing)
+    //TODO 1: Remove (testing only)
     addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
-            UpdateSlider();
             index++;
+            UpdateSlider();
         }
     });
 };

@@ -6,7 +6,7 @@ let questionsData;
 function LoadData() {
     //path of the folder and file names
     const templatesFolderPath = "../HTML/Templates/"
-    const fileNames = ["Question", "Answer", "AnswerResult", "Score"]
+    const fileNames = ["Question", "Answer", "AnswerResult", "Score", "Video"]
 
     const jsonFolderPath = "../Questions/"
     const jsonFileName = "Testing.json"
