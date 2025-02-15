@@ -1,6 +1,10 @@
+//modification
+let resultWait = 1.5; //in seconds
+
 //variables for scrolling
 let width = 0;
 let index = 1;
+
 //required for parsing text to html
 const parser = new DOMParser();
 

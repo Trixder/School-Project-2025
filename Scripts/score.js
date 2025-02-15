@@ -34,7 +34,7 @@ function CheckAnswer() {
     setTimeout(() => {
         UpdateSlider();
         index++;
-    }, 1000);
+    }, resultWait * 1000);
 }
 
 //stores the selected answer
