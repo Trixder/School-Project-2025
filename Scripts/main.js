@@ -1,4 +1,4 @@
-let loaded = false;
+const parser = new DOMParser();
 
 function disableScroll() {
     document.body.classList.add("remove-scroll");
@@ -30,21 +30,23 @@ window.onload = function() {
     else width = screen.width;
 
     addEventListener("keydown", (e) => {
-        window.scrollTo({
-            top: 0,
-            left: width*index,
-            behavior: "smooth"
-        });
-        index++;
+        if (e.key === "Enter") {
+            UpdateSlider();
+            index++;
+        }
     });
 };
 
 window.onresize = function() {
     width = document.getElementsByClassName("question")[0].getBoundingClientRect().width;
+    UpdateSlider();
+    
+};
 
+function UpdateSlider() {
     window.scrollTo({
         top: 0,
         left: width*index,
         behavior: "smooth"
     });
-};
+}

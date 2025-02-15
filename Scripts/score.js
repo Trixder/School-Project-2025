@@ -8,13 +8,27 @@ function CheckAnswer() {
 
     const correctID = questionsData.questions[currentQuestion].question.correctID;
     const selected = questionsData.questions[currentQuestion].question.answers.indexOf(answerValue);
+    
+    const resultElement = document.getElementsByClassName("result")[currentQuestion];
+
+    console.log(resultElement);
 
     if (correctID == selected) {
+        resultElement.style.backgroundColor = "green";
         score++;
-    }
+    } else resultElement.style.backgroundColor = "red";
+
+
+    UpdateSlider();
+    index++;
+
+    setTimeout(() => {
+        UpdateSlider();
+        index++;
+    }, 1000);
 }
 
-function toggleCheckbox(element) {
+function ToggleCheckbox(element) {
     if (checked == null) {
         checked = element;
         checked.classList.toggle("checked");
@@ -23,6 +37,4 @@ function toggleCheckbox(element) {
         checked = element;
         checked.classList.toggle("checked");
     }
-    console.log(element.parentElement.parentElement.id);
-    CheckAnswer();
 }

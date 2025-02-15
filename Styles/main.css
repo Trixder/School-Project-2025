@@ -29,9 +29,8 @@ body::-webkit-scrollbar {
     flex-wrap: nowrap;
 }
   
-.question {
-    width: 200px;
-    height: 100px;
-    background-color: lightblue;
+.question, .result, .end {
+    width: 100vw;
+    height: 100vh;
     flex-shrink: 0;
 }

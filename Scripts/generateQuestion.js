@@ -1,24 +1,30 @@
 function GenerateQuestions(questions, templates) {
     const questionsElement = document.body.getElementsByClassName("questions")[0];
 
-    const parser = new DOMParser();
-
     for (const question of questions.questions) {
-        
         switch (question.question.type) {
             case "question":
-                GenerateQuestion(questionsElement, question, parser, templates);
+                GenerateQuestion(questionsElement, question, templates);
                 break;
             default:
-                console.log("Something went wrong");
+                console.log("Missing template for question with type:" + question.question.type);
         }
+
+        const resultHTML = parser.parseFromString(templates.AnswerResult, "text/html");
+        const resultElement = resultHTML.body.firstChild;
+
+        questionsElement.append(resultElement);
     }
 
+    const scoreHTML = parser.parseFromString(templates.Score, "text/html");
+        const scoreElement = scoreHTML.body.firstChild;
+
+        questionsElement.append(scoreElement);
+
     width = document.getElementsByClassName("question")[0].getBoundingClientRect().width;
-    loaded = true;
 }
 
-function GenerateQuestion(questionsElement, question, parser, templates) {
+function GenerateQuestion(questionsElement, question, templates) {
         const questionHTML = parser.parseFromString(templates.Question, "text/html");
         const questionElement = questionHTML.body.firstChild;
         const valueElement = questionHTML.body.getElementsByClassName("value")[0];
