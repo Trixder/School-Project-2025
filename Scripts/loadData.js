@@ -1,13 +1,26 @@
 function LoadData() {
-    const folderPath = "../Questions/"
-    const fileName = "Testing.json"
+    const templatesFolderPath = "../HTML/Templates/"
+    const fileNames = ["Question", "Answer"]
+    let templates = {};
 
-    fetch(folderPath + fileName)
+    const jsonFolderPath = "../Questions/"
+    const jsonFileName = "Testing.json"
+
+    Promise.all(fileNames.map(fileName => 
+            fetch(templatesFolderPath + fileName + ".html")
+                .then(response => response.text())
+                .then(data => {
+                    templates[fileName] = data;
+                })
+                .catch(error => console.error("Error loading JSON:", error))
+    )).then(() => {
+        fetch(jsonFolderPath + jsonFileName)
         .then(response => response.json())
         .then(data => {
             questions = data;
-            console.log("Data Loaded:", questions);
-            //Call something from here;
+            questionsData = data;
+            GenerateQuestions(questions, templates);
         })
         .catch(error => console.error("Error loading JSON:", error));
+    });
 }

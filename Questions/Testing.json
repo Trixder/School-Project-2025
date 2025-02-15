@@ -4,6 +4,7 @@
                 "type": "question",
                 "value": "What is the capital of France?",
                 "answers": ["Paris", "London", "Berlin", "Madrid"],
+                "questionID": 0,
                 "correctID": 0
             }
         },
@@ -12,6 +13,7 @@
                 "type": "question",
                 "value": "Which planet is known as the Red Planet?",
                 "answers": ["Earth", "Mars", "Jupiter", "Venus"],
+                "questionID": 1,
                 "correctID": 1
             }
         },
@@ -20,6 +22,7 @@
                 "type": "question",
                 "value": "What is 2 + 2?",
                 "answers": ["3", "4", "5", "6"],
+                "questionID": 2,
                 "correctID": 1
             }
         }

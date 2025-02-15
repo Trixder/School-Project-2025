@@ -28,34 +28,11 @@
 </head>
 <body>
     <div class="questions">
-        <div class="question" style="background-color: black; width: 100vw; height: 100vh;">
-            <h3 id="value"></h3>
-            <div id="answers">
-                <div class="checkbox-box" onclick="toggleCheckbox(this)">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eligendi dolorum autem, amet quas hic alias quam magni est. Nisi porro nemo nam iusto voluptas eum recusandae quisquam, minima a?</div>
-                <div class="checkbox-box" onclick="toggleCheckbox(this)"></div>
-                <div class="checkbox-box" onclick="toggleCheckbox(this)"></div>
-            </div>
-            <button type="button">Click Me!</button>
-        </div>
-        <div class="question" style="background-color: blue; width: 100vw; height: 100vh;"></div>
-        <div class="question" style="background-color: purple; width: 100vw; height: 100vh;"></div>
-        <div class="question" style="background-color: red; width: 100vw; height: 100vh;"></div>
-        <div class="question" style="background-color: gray; width: 100vw; height: 100vh;"></div>
+        
     </div>
+    <script src="../Scripts/generateQuestion.js"></script>
     <script src="../Scripts/loadData.js"></script>
     <script src="../Scripts/main.js"></script>
-    <script>
-        let checked = null;
-        function toggleCheckbox(element) {
-            if (checked == null) {
-                checked = element;
-                checked.classList.toggle("checked");
-            } else {
-                checked.classList.toggle("checked");
-                checked = element;
-                checked.classList.toggle("checked");
-            }
-        }
-    </script>
+    <script src="../Scripts/score.js"></script>
 </body>
 </html> 
